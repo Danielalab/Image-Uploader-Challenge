@@ -1,0 +1,36 @@
+/* E63946 */
+
+.w100 {
+  width: 100%;
+}
+
+.iconDone {
+  font-size: 40px;
+  color: #1DAF2B;
+}
+
+.label {
+  display: block;
+  font-size: 16px;
+  margin: 0.8rem 0;
+}
+
+.input {
+  border: none;
+  box-sizing: border-box;
+  background-color: #F6F8FB;
+  padding: 0.8rem 0.2rem;
+  font-size: 0.8rem;
+  width: 70%;
+}
+
+.buttonCopyLink {
+  width: 30%;
+  background-color: #0779e4;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+  color: #fff;
+  padding: 0.8rem 1rem;
+  font-size: 0.8rem;
+}

@@ -6,6 +6,7 @@ const UploadImageContainer = () => {
     event.stopPropagation();
     event.preventDefault();
     // Style the drag-and-drop as a "copy file" operation.
+    // eslint-disable-next-line no-param-reassign
     event.dataTransfer.dropEffect = 'copy';
   };
 
@@ -21,7 +22,7 @@ const UploadImageContainer = () => {
     const fileList = event.target.files;
     const fileObject = fileList[0];
     console.log(fileObject);
-  }
+  };
 
   return (
     <>
@@ -31,23 +32,29 @@ const UploadImageContainer = () => {
           onDragOver={dragOverHandler}
           onDrop={dropHandler}
         >
-          <span className={"material-icons " + styles.iconFolderUpload}>
+          <span className={`material-icons ${styles.iconFolderUpload}`}>
             drive_folder_upload
           </span>
           <p>Drag & Drop your image here</p>
         </div>
         <p>or</p>
-        <button className={styles.buttonWrapper}>
-          <label className={styles.labelButton}>Choose a file</label>
-          <input
-            type="file"
-            className={styles.inputFile}
-            onChange={changeInputFileHandler}
-          />
+        <button
+          type="button"
+          className={styles.buttonWrapper}
+        >
+          <label htmlFor="input-file" className={styles.labelButton}>
+            Choose a file
+            <input
+              type="file"
+              id="input-file"
+              className={styles.inputFile}
+              onChange={changeInputFileHandler}
+            />
+          </label>
         </button>
       </section>
     </>
   );
-}
+};
 
 export default UploadImageContainer;

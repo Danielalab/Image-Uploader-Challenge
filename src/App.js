@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import styles from './App.module.css';
 import UploadImageContainer from './components/UploadImageContainer';
 import ImageLoader from './components/ImageLoader';

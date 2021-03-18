@@ -1,9 +1,5 @@
 /* E63946 */
 
-.w100 {
-  width: 100%;
-}
-
 .iconDone {
   font-size: 40px;
   color: #1DAF2B;
@@ -33,4 +29,11 @@
   color: #fff;
   padding: 0.8rem 1rem;
   font-size: 0.8rem;
+}
+
+@media (min-width: 992px) {
+  .imgHeight {
+    max-height: 300px;
+    width: auto;
+  }
 }

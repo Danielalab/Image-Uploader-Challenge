@@ -4,7 +4,7 @@ import testImg from '../test.jpg';
 
 const ImageUploaded = () => {
   return (
-    <section className="container flex-column section">
+    <section className="container flex-column section w-50">
       <div>
         <span className={"material-icons-round " + styles.iconDone}>
           check_circle
@@ -13,11 +13,11 @@ const ImageUploaded = () => {
       <h3>Uploaded Successfully!</h3>
       <figure className="my-1">
         <img
-          className={styles['w100']}
+          className={"w100 " + styles.imgHeight}
           src={testImg} 
-          alt="name image" />
+          alt="name" />
       </figure>
-      <form className={styles['w100']}>
+      <form className={"w100 "}>
         <div>
           <label className={styles.label}>Option 1</label>
           <div>

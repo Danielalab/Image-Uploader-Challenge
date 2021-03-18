@@ -3,7 +3,7 @@ import styles from "./css/ImageLoader.module.css";
 
 const ImageLoader = () => {
   return (
-    <section className={styles.section}>
+    <section>
       <div className="d-flex align-items-center">
         <span className={"material-icons-round " + styles.iconFileUpload}>
           upload_file

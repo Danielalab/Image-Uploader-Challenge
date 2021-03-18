@@ -6,6 +6,7 @@
 
 body {
   font-family: var(--main-text-font);
+  box-sizing: border-box;
 }
 
 .title-font {
@@ -29,6 +30,10 @@ body {
   margin: 0 1rem;
 }
 
+.w100 {
+  width: 100%;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -39,6 +44,7 @@ body {
 .section {
   width: 90%;
   margin: 1.5rem 0;
+  box-sizing: border-box;
 }
 
 .d-flex {
@@ -55,4 +61,27 @@ body {
 
 .flex-column {
   flex-direction: column;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .flex-row {
+    flex-direction: row;
+  }
+
+  .w-50 {
+    width: 50%;
+  }
+
+  .section {
+    margin: 0;
+    padding: 0 2rem;
+  }
 }

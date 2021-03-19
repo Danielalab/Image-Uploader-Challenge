@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/UploadImageContainer.module.css';
 
-const UploadImageContainer = () => {
+const UploadImageContainer = ({ fileLoadHandler }) => {
   const dragOverHandler = (event) => {
     event.stopPropagation();
     event.preventDefault();
@@ -15,7 +16,7 @@ const UploadImageContainer = () => {
     event.preventDefault();
     const fileList = event.dataTransfer.files;
     const fileObject = fileList[0];
-    console.log(fileObject);
+    fileLoadHandler(fileObject);
   };
 
   const changeInputFileHandler = (event) => {
@@ -58,3 +59,7 @@ const UploadImageContainer = () => {
 };
 
 export default UploadImageContainer;
+
+UploadImageContainer.propTypes = {
+  fileLoadHandler: PropTypes.func.isRequired,
+};

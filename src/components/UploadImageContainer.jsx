@@ -22,7 +22,7 @@ const UploadImageContainer = ({ fileLoadHandler }) => {
   const changeInputFileHandler = (event) => {
     const fileList = event.target.files;
     const fileObject = fileList[0];
-    console.log(fileObject);
+    fileLoadHandler(fileObject);
   };
 
   return (

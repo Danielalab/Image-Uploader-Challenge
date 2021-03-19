@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './css/ImageLoader.module.css';
 
 const ImageLoader = ({ imgName, classes }) => (
-  <section className={`py-1 ${classes}`}>
+  <section className={`py-1 ${classes}`} data-testid="image-loader-element">
     <div className="d-flex align-items-center">
       <span className={`material-icons-round ${styles.iconFileUpload}`}>
         upload_file
@@ -22,6 +22,6 @@ const ImageLoader = ({ imgName, classes }) => (
 export default ImageLoader;
 
 ImageLoader.propTypes = {
-  imgName: PropTypes.string.isRequired,
+  imgName: PropTypes.string,
   classes: PropTypes.string.isRequired,
 };

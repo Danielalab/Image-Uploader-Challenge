@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './App.module.css';
 import UploadImageContainer from './components/UploadImageContainer';
 import ImageLoader from './components/ImageLoader';
-import ImageUploaded from './components/ImageUploaded';
+/* import ImageUploaded from './components/ImageUploaded'; */
 
 function App() {
   const [fileData, setFileData] = useState(null);
@@ -12,11 +12,14 @@ function App() {
       <h1 className={styles.h1}>Upload your image</h1>
       <p className={styles.p}>File should be Jpg, Png ...</p>
       <div className="container flex-column section flex-row">
-        <div className="section w-50">
+        <div className={`section w-50 ${styles.overflowHidden}`}>
           <UploadImageContainer fileLoadHandler={setFileData} />
-          <ImageLoader imgName={(fileData || {}).name} />
+          <ImageLoader
+            classes={`${styles.loaderHide} ${fileData && styles.loaderShow}`}
+            imgName={(fileData || {}).name}
+          />
         </div>
-        <ImageUploaded />
+        {/* <ImageUploaded /> */}
       </div>
     </div>
   );

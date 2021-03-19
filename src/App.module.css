@@ -1,3 +1,16 @@
 .h1 {
   margin-bottom: 0;
 }
+
+.overflowHidden {
+  overflow: hidden;
+}
+
+.loaderHide {
+  transform: translateY(80px);
+  transition: transform 400ms ease-out 150ms;
+}
+
+.loaderShow {
+  transform: translateY(0);
+}

@@ -27,7 +27,7 @@ const UploadImageContainer = ({ fileLoadHandler }) => {
 
   return (
     <>
-      <section className="secondary-text-color text-center ">
+      <section className="secondary-text-color text-center py-1">
         <div
           className={styles.dragAndDrogContainer}
           onDragOver={dragOverHandler}

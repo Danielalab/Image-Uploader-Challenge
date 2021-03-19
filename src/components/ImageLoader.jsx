@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './css/ImageLoader.module.css';
 
-const ImageLoader = ({ imgName }) => (
-  <section>
+const ImageLoader = ({ imgName, classes }) => (
+  <section className={`py-1 ${classes}`}>
     <div className="d-flex align-items-center">
       <span className={`material-icons-round ${styles.iconFileUpload}`}>
         upload_file
@@ -23,4 +23,5 @@ export default ImageLoader;
 
 ImageLoader.propTypes = {
   imgName: PropTypes.string.isRequired,
+  classes: PropTypes.string.isRequired,
 };

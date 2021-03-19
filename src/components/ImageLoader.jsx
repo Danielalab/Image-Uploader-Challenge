@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './css/ImageLoader.module.css';
 
-const ImageLoader = () => (
+const ImageLoader = ({ imgName }) => (
   <section>
     <div className="d-flex align-items-center">
       <span className={`material-icons-round ${styles.iconFileUpload}`}>
@@ -9,7 +10,7 @@ const ImageLoader = () => (
       </span>
       <div className={styles.flexGrow}>
         <p className={`d-flex ${styles.nameFile}`}>
-          name-file
+          {imgName}
           <span>0%</span>
         </p>
         <div className={styles.loaderBar} />
@@ -19,3 +20,7 @@ const ImageLoader = () => (
 );
 
 export default ImageLoader;
+
+ImageLoader.propTypes = {
+  imgName: PropTypes.string.isRequired,
+};

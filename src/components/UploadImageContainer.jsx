@@ -32,6 +32,7 @@ const UploadImageContainer = ({ fileLoadHandler }) => {
           className={styles.dragAndDrogContainer}
           onDragOver={dragOverHandler}
           onDrop={dropHandler}
+          data-testid="draganddrog-container"
         >
           <span className={`material-icons ${styles.iconFolderUpload}`}>
             drive_folder_upload

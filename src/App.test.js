@@ -1,5 +1,7 @@
 import React from 'react';
-import { fireEvent, getByText, render, screen, waitFor } from '@testing-library/react';
+import {
+  fireEvent, render, screen, waitFor,
+} from '@testing-library/react';
 import App from './App';
 
 test('renders "Upload your image title" title', () => {
@@ -25,6 +27,8 @@ test('renders ImageLoader component', async () => {
   fireEvent.change(inputNode, changeInputValue);
 
   await waitFor(() => {
+    const pElement = screen.queryByText('test-file.jpg');
+    expect(pElement).toBeInTheDocument();
     const imageLoader = screen.getByTestId('image-loader-element');
     expect(imageLoader.classList.contains('loaderShow')).toBeTruthy();
   });

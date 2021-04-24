@@ -7,6 +7,7 @@
 body {
   font-family: var(--main-text-font);
   box-sizing: border-box;
+  background-color: #fafafa;
 }
 
 .title-font {
@@ -87,5 +88,9 @@ body {
   .section {
     margin: 0;
     padding: 0 2rem;
+  }
+
+  .minHeight {
+    min-height: 80vh;
   }
 }

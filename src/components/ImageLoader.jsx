@@ -11,15 +11,21 @@ const ImageLoader = ({ imgName, classes }) => (
       <div className={styles.flexGrow}>
         <p className={`d-flex ${styles.nameFile}`}>
           {imgName}
-          <span>0%</span>
+          <span id="load-counter">0%</span>
         </p>
-        <div className={styles.loaderBar} />
+        <div className={styles.loaderBar}>
+          <div className={styles.progress} id="progress-bar" />
+        </div>
       </div>
     </div>
   </section>
 );
 
 export default ImageLoader;
+
+ImageLoader.defaultProps = {
+  imgName: '',
+};
 
 ImageLoader.propTypes = {
   imgName: PropTypes.string,

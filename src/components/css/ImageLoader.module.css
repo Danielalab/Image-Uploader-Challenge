@@ -17,3 +17,11 @@
   background-color: #d4d4d4;
   border-radius: 12px;
 }
+
+.progress {
+  background-color: #c237d2;
+  border-radius: 12px;
+  height: 10px;
+  transition: width 2.5s ease;
+  width: 0;
+}

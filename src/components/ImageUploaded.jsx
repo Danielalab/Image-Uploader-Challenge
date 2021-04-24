@@ -30,6 +30,7 @@ const ImageUploaded = ({ images }) => (
             <input
               className={styles.input}
               value={img.url}
+              readOnly
             />
             <button
               type="button"
@@ -50,6 +51,6 @@ ImageUploaded.propTypes = {
   images: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    _id: PropTypes.string.isRequired,
+    _id: PropTypes.number.isRequired,
   })).isRequired,
 };

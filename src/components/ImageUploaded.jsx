@@ -4,6 +4,12 @@ import PropTypes from 'prop-types';
 
 import styles from './css/ImageUploaded.module.css';
 
+const copy = (event) => {
+  const input = event.target.previousSibling;
+  input.select();
+  document.execCommand('copy');
+};
+
 const ImageUploaded = ({ images }) => (
   <section className="container flex-column section w-50">
     <div>
@@ -35,8 +41,9 @@ const ImageUploaded = ({ images }) => (
             <button
               type="button"
               className={styles.buttonCopyLink}
+              onClick={copy}
             >
-              Copy link
+              Copy
             </button>
           </div>
         </div>

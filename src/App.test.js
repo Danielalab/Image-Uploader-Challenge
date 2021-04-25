@@ -19,7 +19,10 @@ test('renders ImageLoader component', async () => {
   expect(imageLoaderInitial.classList.contains('loaderShow')).toBeFalsy();
 
   const inputNode = screen.getByLabelText('Choose a file', { selector: 'input' });
-  const files = [{ name: 'test-file.jpg' }];
+  const img = new File(['foo'], 'test-file.jpg', {
+    type: 'image/png',
+  });
+  const files = [img];
   const changeInputValue = {
     target: { files },
   };
